@@ -33,5 +33,5 @@ class Animal(db.Model):
     zookeeper_id = db.Column(db.Integer, db.ForeignKey('zookeepers.id'))
     elcosure_id = db.Column(db.Integer, db.ForeignKey('enclosures.id'))
 
-    zookeepers = db.relationship('Zookeeper', back_populates='animals')
-    enclosures = db.relationship('Enclosure', back_populates='animals')
+    zookeeper = db.relationship('Zookeeper', back_populates='animals')
+    enclosure = db.relationship('Enclosure', back_populates='animals')
